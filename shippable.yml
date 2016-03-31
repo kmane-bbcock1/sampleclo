@@ -27,4 +27,10 @@ build:
   post_ci:
     - docker push shippabledocker/shiphitchcock1_testsamplepyt1
     - docker push shippabledocker/shiphitchcock1_testsamplepyt1
+    
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker 
   
