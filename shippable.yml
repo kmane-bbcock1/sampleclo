@@ -22,7 +22,7 @@ build:
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - cd sample  
-    - lein test2junit 
+    #- lein test2junit 
 
   post_ci:
     - docker push shippabledocker/shiphitchcock1_testsamplepyt1
