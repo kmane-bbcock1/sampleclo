@@ -7,15 +7,15 @@ lein:
   - lein2
   
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_testsamplepyt1 .
-    - docker build -t=shippabledocker/shiphitchcock1_testsamplepyt2 .
+ # pre_ci:
+   # - docker build -t=shippabledocker/shiphitchcock1_testsamplepyt1 .
+   # - docker build -t=shippabledocker/shiphitchcock1_testsamplepyt2 .
 
   pre_ci_boot:
-      image_name: shippabledocker/shiphitchcock1_testsamplepyt1
-      image_tag: latest
-      pull: false
-      options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+      image_name: drydock/u12clo
+      image_tag: prod
+      pull: true
+     # options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     #- lein version
@@ -24,12 +24,12 @@ build:
     - cd sample    
     #- lein test2junit 
 
-  post_ci:
-    - docker push shippabledocker/shiphitchcock1_testsamplepyt1
-    - docker push shippabledocker/shiphitchcock1_testsamplepyt1
+  #post_ci:
+  #  - docker push shippabledocker/shiphitchcock1_testsamplepyt1
+  #  - docker push shippabledocker/shiphitchcock1_testsamplepyt1
   
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker 
+#integrations:
+  #hub:
+  ##  - integrationName: ship-docker
+    #  type: docker 
   
