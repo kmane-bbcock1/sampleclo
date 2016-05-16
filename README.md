@@ -1,2 +1,2 @@
 # sampleClo
-test sample for Clojure
+test sample for Clojure project
