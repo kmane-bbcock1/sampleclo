@@ -21,7 +21,7 @@ build:
     #- lein version
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - cd sample    
+    - cd sample         
     #- lein test2junit 
 
   #post_ci:
